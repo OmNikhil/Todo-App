@@ -121,13 +121,13 @@
 }
 
 /* Bottom Actions */
-.bottom-actions {
+.botton-actions {
   display: flex;
   justify-content: space-between;
   margin-top: 20px;
 }
 
-.bottom-actions button {
+.botton-actions button {
   padding: 10px 20px;
   border: none;
   border-radius: 6px;
@@ -135,20 +135,20 @@
   cursor: pointer;
 }
 
-.bottom-actions .danger {
+.botton-actions .danger {
   background-color: #dc3545;
   color: white;
 }
 
-.bottom-actions .danger:hover {
+.botton-actions .danger:hover {
   background-color: #c82333;
 }
 
-.bottom-actions .exit {
+.botton-actions .exit {
   background-color: #6c757d;
   color: white;
 }
 
-.bottom-actions .exit:hover {
+.botton-actions .exit:hover {
   background-color: #5a6268;
 }
