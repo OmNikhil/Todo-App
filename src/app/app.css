@@ -1,0 +1,154 @@
+/* Container */
+.todo-container {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: 10px;
+  background-color: #f7f7f7;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Title */
+.title {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Form */
+.todo-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.todo-form input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.todo-form input[type="text"]:focus {
+  border-color: #007bff;
+}
+
+.todo-form button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.todo-form button:hover {
+  background-color: #0056b3;
+}
+
+/* Todo List */
+.todo-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.todo-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px;
+  margin-bottom: 10px;
+  background-color: white;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  transition: background-color 0.3s;
+}
+
+.todo-list li.done span {
+  text-decoration: line-through;
+  color: #aaa;
+}
+
+.todo-list li:hover {
+  background-color: #f0f0f0;
+}
+
+.todo-list input[type="checkbox"] {
+  margin-right: 10px;
+  transform: scale(1.2);
+}
+
+.todo-list span {
+  flex: 1;
+  font-size: 16px;
+}
+
+/* Actions */
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+.actions button {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.actions .edit {
+  background-color: #ffc107;
+  color: #333;
+}
+
+.actions .edit:hover {
+  background-color: #e0a800;
+}
+
+.actions .delete {
+  background-color: #dc3545;
+  color: white;
+}
+
+.actions .delete:hover {
+  background-color: #bd2130;
+}
+
+/* Bottom Actions */
+.bottom-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.bottom-actions button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.bottom-actions .danger {
+  background-color: #dc3545;
+  color: white;
+}
+
+.bottom-actions .danger:hover {
+  background-color: #c82333;
+}
+
+.bottom-actions .exit {
+  background-color: #6c757d;
+  color: white;
+}
+
+.bottom-actions .exit:hover {
+  background-color: #5a6268;
+}

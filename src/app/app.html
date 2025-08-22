@@ -1,5 +1,24 @@
-<h1>Angular</h1>
+<div class="todo-container">
+  <h1 class="title">To-Do List</h1>
+  <form action="" class="todo-form">
 
-<p>
-  Angular is a TypeScript-based open-source web application framework developed and maintained by Google. It's designed to build single-page applications (SPAs)—web apps that load a single HTML page and dynamically update the content without refreshing the page.
-</p>
+    <input type="text" name="todo" placeholder="Enter task..." required>
+    <button type="submit">Update</button>
+  </form>
+
+  <ul class="todo-list">
+    @for (todo of items; track $index) {
+      <li class="todo-item">
+        <span>{{todo}}</span>
+
+        <button class="edit">Edit</button>
+        <button class="delete">Delete</button>
+      </li>
+    }
+  </ul>
+
+  <div class="botton-actions">
+    <button class="danger">Delete All</button>
+    <button class="exit">Exit</button>
+  </div>
+</div>
