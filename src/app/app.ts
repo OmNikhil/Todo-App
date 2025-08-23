@@ -10,26 +10,27 @@ import { RouterOutlet } from '@angular/router';
 })
 export class App {
   protected readonly title = signal('Todo-App');
-items: {id:number; task: string; done: boolean}[]=[];
-newTodo: any;
+  items: {id:number; task: string; done: boolean}[]=[];
+  newTodo: any;
+  isEdit = false;
 
-getTodos() {}
+  getTodos() {}
 
-onSubmit() {}
+  onSubmit() {}
 
-toggleDone() {}
+  toggleDone() {}
 
-onCheckboxChange() {}
+  onCheckboxChange() {}
 
-deleteTodo() {}
+  deleteTodo() {}
 
-deleteAll() {}
+  deleteAll() {}
 
-editTodo() {}
+  editTodo() {}
 
-resetForm() {}
+  resetForm() {}
 
-exitApp() {
-  alert('Exit requested (cannot close tab from script).');
-}
+  exitApp() {
+    alert('Exit requested (cannot close tab from script).');
+  }
 }
