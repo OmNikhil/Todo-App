@@ -1,6 +1,0 @@
-FROM dvmarques/openjdk-17-jdk-alpine-with-timezone
-WORKDIR /app
-
-COPY . .
-ENTRYPOINT [ "./mvnw", "spring-boot:run" ]
-
