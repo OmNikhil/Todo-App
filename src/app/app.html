@@ -1,28 +1,68 @@
-<div class="todo-container">
+<!-- <div class="todo-container">
   <h1 class="title">To-Do List</h1>
 
   <form action="" class="todo-form">
-    <input type="text" class="in-task">
-    <button class="btn-add-update">g</button>
+    <input type="text" class="in-task" name="todo" [(ngModel)]="newTodo" placeholder="Enter task..." required>
+    <button class="btn-add-update">{{ isEdit ?'Update':'Add' }}</button>
   </form>
 
-  
 </div>
 
 <div class="todo-list-container">
   <ul class="todo-list">
-    <li class="todo-item">
-      <span>f</span>
+    @for (item of items; track $index) {
+      <li class="todo-item">
+      <span>{{item.task}}</span>
 
       <div class="actions">
-        <button class="btn-edit">ds</button>
-        <button class="btn-delete"></button>
+        <button class="btn-edit" (click)="editTodo()">Edit</button>
+        <button class="btn-delete" (click)="deleteTodo()">Delete</button>
+      </div>
+    </li>
+    }
+  </ul>
+
+  <div class="bottom-actions">
+    <button class="btn-delete-all" (click)="deleteAll()">Delete All</button>
+    <button class="btn-exit" (click)="exitTodo()">Exit</button>
+  </div>
+</div> -->
+
+
+
+<div class="todo-container">
+  <h1 class="title">{{ title() }}</h1>
+
+  <form (ngSubmit)="onSubmit()" class="todo-form">
+    <input
+      type="text"
+      class="in-task"
+      name="todo"
+      [(ngModel)]="newTodo"
+      placeholder="Enter task..."
+      required
+    />
+    <button type="submit" class="btn-add-update">
+      {{ isEdit ? 'Update' : 'Add' }}
+    </button>
+  </form>
+</div>
+
+<div class="todo-list-container" *ngIf="items.length > 0">
+  <ul class="todo-list">
+    <li class="todo-item" *ngFor="let item of items; let i = index">
+      <span [class.done]="item.done" (click)="toggleDone(i)">
+        {{ item.task }}
+      </span>
+      <div class="actions">
+        <button class="btn-edit" (click)="editTodo(i)">Edit</button>
+        <button class="btn-delete" (click)="deleteTodo(i)">Delete</button>
       </div>
     </li>
   </ul>
 
   <div class="bottom-actions">
-    <button class="btn-delete-all">df</button>
-    <button class="btn-exit">dsfs</button>
+    <button class="btn-delete-all" (click)="deleteAll()">Delete All</button>
+    <button class="btn-exit" (click)="exitTodo()" *ngIf="isEdit">Exit</button>
   </div>
 </div>
